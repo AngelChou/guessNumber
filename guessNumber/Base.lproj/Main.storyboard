@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="guestNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NCY-xj-xgP">
+                                <rect key="frame" x="101" y="180" width="173.5" height="307.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="終極密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey8-AE-fQB">
+                                        <rect key="frame" x="26" y="0.0" width="121.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請在範圍內猜一個數字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JF3-d7-6t7">
+                                        <rect key="frame" x="0.0" y="56" width="173.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1~100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amX-Pi-gG3">
+                                        <rect key="frame" x="0.0" y="96.5" width="173.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-fa-8Z1">
+                                        <rect key="frame" x="0.0" y="137" width="173.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scr-GD-lAk">
+                                        <rect key="frame" x="71" y="187" width="31" height="30"/>
+                                        <state key="normal" title="送出"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Wz-nF-hEf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你還有10次機會" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXX-Fn-esB">
+                                        <rect key="frame" x="0.0" y="237" width="173.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRR-GW-T6q">
+                                        <rect key="frame" x="55.5" y="277.5" width="62" height="30"/>
+                                        <state key="normal" title="重玩一次"/>
+                                        <connections>
+                                            <action selector="restartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AX5-11-dkc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SKr-fa-8Z1" firstAttribute="leading" secondItem="NCY-xj-xgP" secondAttribute="leading" id="CLQ-Q1-ldf"/>
+                                    <constraint firstItem="gXX-Fn-esB" firstAttribute="leading" secondItem="NCY-xj-xgP" secondAttribute="leading" id="U13-TU-ju2"/>
+                                    <constraint firstItem="JF3-d7-6t7" firstAttribute="leading" secondItem="NCY-xj-xgP" secondAttribute="leading" id="Ut5-SY-hCD"/>
+                                    <constraint firstAttribute="trailing" secondItem="SKr-fa-8Z1" secondAttribute="trailing" id="VaF-Y3-ZFr"/>
+                                    <constraint firstAttribute="trailing" secondItem="amX-Pi-gG3" secondAttribute="trailing" id="asa-WL-1Z9"/>
+                                    <constraint firstAttribute="trailing" secondItem="gXX-Fn-esB" secondAttribute="trailing" id="bDH-Eg-cxf"/>
+                                    <constraint firstItem="amX-Pi-gG3" firstAttribute="leading" secondItem="NCY-xj-xgP" secondAttribute="leading" id="ncz-yR-UcG"/>
+                                    <constraint firstAttribute="trailing" secondItem="JF3-d7-6t7" secondAttribute="trailing" id="zVE-4i-gKd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NCY-xj-xgP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OyK-hI-c57"/>
+                            <constraint firstItem="NCY-xj-xgP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iYP-vg-9CB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lifeLabel" destination="gXX-Fn-esB" id="RXc-TI-abL"/>
+                        <outlet property="messageLabel" destination="JF3-d7-6t7" id="cuz-vQ-QuL"/>
+                        <outlet property="numberTextField" destination="SKr-fa-8Z1" id="Mvb-1j-ddf"/>
+                        <outlet property="rangeLabel" destination="amX-Pi-gG3" id="l9A-sq-gZu"/>
+                        <outlet property="sendButton" destination="scr-GD-lAk" id="xCB-AI-L4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
